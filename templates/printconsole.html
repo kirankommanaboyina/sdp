@@ -1,0 +1,38 @@
+{% extends 'navbar.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div>
+
+    <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <form method="post" action="{% url 'printconsole'%}">
+        {% csrf_token %}
+        <label>enter text</label>
+        <input type="text" name="kiran" required>
+        <button type="submit">submit</button>
+    </form>
+    </div>
+    <div class="col">
+      <h1>
+        {{user_input}}
+      </h1>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
+
+
+  </div>
+</div>
